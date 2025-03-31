@@ -5,19 +5,19 @@
 
 function fetchUser() {
     return new Promise((resolve) => {
-        setTimeout(() => resolve("Viet Hoang!"), 1000);
+        setTimeout(() => resolve("Danny!"), 1000);
     });
 }
 
 function fetchPosts() {
     return new Promise((resolve) => {
-        setTimeout(() => resolve("Tối nay 7h đi đá bóng"), 2000);
+        setTimeout(() => resolve("Tonight 7:00 go soccer"), 2000);
     });
 }
 
 function fetchComments() {
     return new Promise((resolve) => {
-        setTimeout(() => resolve("Phải ăn cơm nhà"), 4000);
+        setTimeout(() => resolve("Eat at home"), 4000);
     });
 }
 
@@ -26,5 +26,5 @@ Promise.all([fetchUser(), fetchPosts(), fetchComments()])
         console.log(result);
     })
     .catch(error => {
-        console.log("Lỗi !: ", error);
+        console.log("Error!: ", error);
     });

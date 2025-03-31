@@ -11,7 +11,7 @@ function fetchData() {
 }
 
 async function getData() {
-    console.log("chuẩn bị lấy data...")
+    console.log("ready for data")
     let data = await fetchData();
     console.log(data);
 }
