@@ -12,31 +12,33 @@ let obj = [{
 },
 ];
 
+for (let i = 0; i < 1; i++) {
 
-function getProfile() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(`Profile: ${obj[1].name}`)
-        }, 2000);
-    });
-}
-function getFriends() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(`Friend: ${obj[1].friend.length}`)
-        },
-            5000);
+    function getProfile() {
+        return new Promise((resolve, error) => {
+            setTimeout(() => {
+                resolve(`Profile: ${obj[i].name}`)
+            }, 2000);
+        });
+    }
+    function getFriends() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(`Friend: ${obj[i].friend.length}`)
+            },
+                5000);
 
-    });
-}
-function getPhotos() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            const pt = ["pt1.jpg", "pt2.jpg"];
-            resolve(`Photo: ${obj[1].photos.length}`)
-            //resolve(`Photos: ${pt.length}`)
-        }, 1500);
-    });
+        });
+    }
+    function getPhotos() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                const pt = ["pt1.jpg", "pt2.jpg"];
+                resolve(`Photo: ${obj[i].photos.length}`)
+                //resolve(`Photos: ${ pt.length }`)
+            }, 1500);
+        });
+    }
 }
 
 async function loadProfile() {
