@@ -36,15 +36,10 @@ function getPhotos(data) {
     });
 }
 
-async function loadProfile(data) {
-    const run = await Promise.all([getProfile(data), getFriends(data), getPhotos(data)]);
-    return run.toString();
-}
-
 async function main(data) {
     for (i = 0; i < data.length; i++) {
-        const result = await loadProfile(data[i]);
-        console.log(result);
+        const run = await Promise.all([getProfile(data[i]), getFriends(data[i]), getPhotos(data[i])]);
+        console.log(run.toString());
     }
 }
 
