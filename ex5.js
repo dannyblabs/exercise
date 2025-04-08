@@ -37,7 +37,7 @@ function getPhotos(data) {
 }
 
 async function main(data) {
-    for (i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         const run = await Promise.all([getProfile(data[i]), getFriends(data[i]), getPhotos(data[i])]);
         console.log(run.toString());
     }
